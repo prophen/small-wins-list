@@ -9,7 +9,7 @@
 		axios
 			.get(`https://small-wins-819.herokuapp.com/wins`)
 			.then(response => {
-				wins = response.data
+				wins = response.data.reverse()
 				
 			})
 	}
