@@ -27,7 +27,7 @@
 
 <div class="container">
 <h1 class="py-3">Hello Wins</h1>
-<div class="grid-4">
+<div class="grid-3">
 {#each wins as win}
 	<div class="card">
 			<h4 class="py-3">{win.description}</h4>

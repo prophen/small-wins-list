@@ -1722,7 +1722,7 @@ var app = (function () {
     			}
     			attr(h1, "class", "py-3");
     			add_location(h1, file, 28, 0, 361);
-    			attr(div0, "class", "grid-4");
+    			attr(div0, "class", "grid-3");
     			add_location(div0, file, 29, 0, 394);
     			attr(div1, "class", "container");
     			add_location(div1, file, 27, 0, 337);

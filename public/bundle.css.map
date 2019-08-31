@@ -5,7 +5,7 @@
     "../src/App.svelte"
   ],
   "sourcesContent": [
-    "<script>\n\timport { onMount } from 'svelte'\n\timport axios from 'axios'\n\n\t\n\tlet win = \"\"\n\t$: wins = []\n\n\t\n\tconst getWins = () => {\n\t\taxios\n\t\t\t.get('https://prophen-small-wins.glitch.me/wins')\n\t\t\t.then(response => {\n\t\t\t\twins = response.data.reverse()\n\t\t\t\t\n\t\t\t})\n\t}\n\tonMount(getWins())\n</script>\n\n\n<style>\n\th4 {\n\t\tcolor: green;\n\t}\n</style>\n\n<div class=\"container\">\n<h1 class=\"py-3\">Hello Wins</h1>\n<div class=\"grid-4\">\n{#each wins as win}\n\t<div class=\"card\">\n\t\t\t<h4 class=\"py-3\">{win.description}</h4>\n\t\t\t<p>{win.createdAt.substring(0,10)}</p>\n\t</div>\n{/each}\n</div>\n</div>\n"
+    "<script>\n\timport { onMount } from 'svelte'\n\timport axios from 'axios'\n\n\t\n\tlet win = \"\"\n\t$: wins = []\n\n\t\n\tconst getWins = () => {\n\t\taxios\n\t\t\t.get('https://prophen-small-wins.glitch.me/wins')\n\t\t\t.then(response => {\n\t\t\t\twins = response.data.reverse()\n\t\t\t\t\n\t\t\t})\n\t}\n\tonMount(getWins())\n</script>\n\n\n<style>\n\th4 {\n\t\tcolor: green;\n\t}\n</style>\n\n<div class=\"container\">\n<h1 class=\"py-3\">Hello Wins</h1>\n<div class=\"grid-3\">\n{#each wins as win}\n\t<div class=\"card\">\n\t\t\t<h4 class=\"py-3\">{win.description}</h4>\n\t\t\t<p>{win.createdAt.substring(0,10)}</p>\n\t</div>\n{/each}\n</div>\n</div>\n"
   ],
   "names": [],
   "mappings": "AAsBC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,KAAK,AACb,CAAC"
