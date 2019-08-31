@@ -1,13 +1,15 @@
 <script>
 	import { onMount } from 'svelte'
 	import axios from 'axios'
+
+	
 	let win = ""
 	$: wins = []
 
 	
 	const getWins = () => {
 		axios
-			.get(`https://small-wins-819.herokuapp.com/wins`)
+			.get('https://prophen-small-wins.glitch.me/wins')
 			.then(response => {
 				wins = response.data.reverse()
 				
