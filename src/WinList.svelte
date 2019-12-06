@@ -1,15 +1,13 @@
 <script>
   import Card from "./Card.svelte";
+  import WinCard from "./WinCard.svelte";
   export let wins;
 </script>
 
 <div class="grid-3">
 
   {#each wins as win}
-    <Card>
-      <h4 class="py-3">{win.description}</h4>
-      <p>{win.createdAt.substring(0, 10)}</p>
-    </Card>
+    <WinCard {win} />
   {:else}
     <Card>Loading</Card>
   {/each}
